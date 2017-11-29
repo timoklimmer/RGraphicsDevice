@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <CustomReportItem Name="RGraphicsDevice1">
+        <Type>RGraphicsDevice</Type>
+        <Top>0.83821cm</Top>
+        <Left>0.73765cm</Left>
+        <Height>8cm</Height>
+        <Width>9cm</Width>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rGraphicsDevice:Code</Name>
+            <Value>="library(ggplot2) + print(qplot(wt, mpg, data=mtcars, geom=c(""point"", ""smooth""), method=""lm"", formula=y~x, color=cyl, main=""Regression of MPG on Weight"", xlab=""Weight"", ylab=""Miles per Gallon"")) "</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </CustomReportItem>
+    </ReportItems>
+    <Height>7.25917in</Height>
+    <Style />
+  </Body>
+  <Width>7.75917in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=.;Initial Catalog=master</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>9187856b-dc31-4799-aec5-03aca267a05f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT name as Base64 from sys.tables</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Base64">
+          <DataField>Base64</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="ReportParameter1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>50261b08-052f-40dd-966e-167af59f8a4d</rd:ReportID>
+</Report>

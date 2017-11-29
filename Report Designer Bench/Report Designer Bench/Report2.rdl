@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <CustomReportItem Name="RGraphicsDevice1">
+        <Type>RGraphicsDevice</Type>
+        <Top>0.49953cm</Top>
+        <Left>0.35137cm</Left>
+        <Height>11.51367cm</Height>
+        <Width>13.42383cm</Width>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rGraphicsDevice:Code</Name>
+            <Value># load all required libraries
+library(ggplot2);
+
+# create a ggplot2 plot
+plot &lt;- qplot(wt, mpg, data=mtcars, geom=c("point", "smooth"),
+  method="lm", formula=y~x, color=cyl,
+  main="Regression of MPG on Weight",
+  xlab="Weight", ylab="Miles Per Gallon")
+
+# print the plot
+print(plot);</Value>
+          </CustomProperty>
+          <CustomProperty>
+            <Name>rGraphicsDevice:Dpi</Name>
+            <Value>96</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </CustomReportItem>
+    </ReportItems>
+    <Height>4.93794in</Height>
+    <Style />
+  </Body>
+  <Width>5.60664in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>50261b08-052f-40dd-966e-167af59f8a4d</rd:ReportID>
+</Report>
